@@ -1,2 +1,11 @@
 # TrabalhoParcial2
- Implementar uma VM utilizando o Vagrant 
+ 
+ DESCRIÇÃO: Implementar uma VM utilizando o Vagrant com os seguintes requisitos:
+
+1 - Sistema Operacional Ubuntu 20.04
+2 - 2 vCPU
+3 - 1GB Memoria RAM
+4 - Mapear um Volume com o nome do Aluno
+5 - Criar uma Interface de Rede Privada com o IP 192.168.1.254/24
+6 - Redirecionamento de Porta 80 do host para a 80 da VM na interface de Rede Privada
+7 - Executar o Script criado no Trabalho Parcial 01 durante a criação desta VM
