@@ -1,12 +1,11 @@
 Vagrant.configure("2") do |config|
   # Configura a box
   config.vm.box = "ubuntu/focal64"
-  config.vm.box_version = "20220113.0.0"
 
   # Configura a quantidade de vCPUs e a memória RAM
-  config.vm.provider "libvirt" do |libvirt|
-    libvirt.cpus = 2
-    libvirt.memory = "1024"
+  config.vm.provider "virtualbox" do |vb|
+    vb.cpus = 2
+    vb.memory = "1024"
   end
 
   # Mapeia um volume com o nome do aluno
@@ -18,9 +17,15 @@ Vagrant.configure("2") do |config|
   # Redirecionamento de porta do host para a VM
   config.vm.network :forwarded_port, guest: 80, host: 80, host_ip: "127.0.0.1", auto_correct: true
 
-  # Executa o script do Trabalho Parcial 01 durante a criação da VM
-  config.vm.provision "shell", path: "script.sh"
+  # Executa o script de provisionamento durante a criação da VM
+  config.vm.synced_folder ".", "/vagrant"
+
+  config.vm.provision "shell", inline: <<-SHELL
+    cd /vagrant
+    bash provision.sh
+  SHELL
 end
+
 
 
 
