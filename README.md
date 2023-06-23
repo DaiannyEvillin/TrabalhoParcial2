@@ -1,3 +1,16 @@
+# Trabalho Parcial 01
+
+Descrição: Criar um script respondendo a Lista de Exercícios.
+
+Observações:
+
+1 - O Script deve implementar todas as regras.
+2 - Inserir comentários suficientes para orientar o que está sendo implementado pelo script.
+3 - Entregar apenas 1 arquivo (.sh ou .pdf)
+4 - Trabalho Individual
+5 - Cópia e Plágio = Zero
+
+
 # Trabalho Parcial 2 
  
 DESCRIÇÃO: Implementar uma VM utilizando o Vagrant com os seguintes requisitos:
